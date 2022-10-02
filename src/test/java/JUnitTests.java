@@ -1,3 +1,6 @@
+/* CISC/CMPE 422/835
+ * Property-based testing: a first example
+ */
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

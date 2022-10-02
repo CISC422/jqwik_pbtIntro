@@ -1,3 +1,8 @@
+/* CISC/CMPE 422/835
+ * Property-based testing: a first example
+ * Finding the maximum among 4 integers (maxInt)
+ * Finding the index of the maximum in an int array of length 4
+ */
 public class Max {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -31,8 +36,8 @@ public class Max {
             return x4;
     }
 
+    // a is assumed to contain exactly 4 ints!
     public static int maxPos(int[] a) {
-
         if (a[0] > a[1])
             if (a[0] > a[2])
                 if (a[0] > a[3])
