@@ -15,7 +15,10 @@ public class Properties {
     @Property
     @Report(Reporting.GENERATED)
  //   void maxIntProp1(@ForAll @Positive int x1, @ForAll @Positive int x2, @ForAll @Positive int x3, @ForAll @Positive int x4) {
-    void maxIntProp2(@ForAll @IntRange(min=1, max=4) int x1, @ForAll @IntRange(min=1, max=4)int x2, @ForAll @IntRange(min=1, max=4) int x3, @ForAll @IntRange(min=1, max=4) int x4) {
+    void maxIntProp2(@ForAll @IntRange(min=1, max=4) int x1,
+                     @ForAll @IntRange(min=1, max=4) int x2,
+                     @ForAll @IntRange(min=1, max=4) int x3,
+                     @ForAll @IntRange(min=1, max=4) int x4) {
         int res = Max.maxInt(x1, x2, x3, x4);
         Assertions.assertThat(res).isGreaterThanOrEqualTo(x1);
         Assertions.assertThat(res).isGreaterThanOrEqualTo(x2);
