@@ -14,8 +14,8 @@ public class Properties {
 
     @Property
     @Report(Reporting.GENERATED)
- //   void maxIntProp1(@ForAll @Positive int x1, @ForAll @Positive int x2, @ForAll @Positive int x3, @ForAll @Positive int x4) {
-    void maxIntProp2(@ForAll @IntRange(min=1, max=4) int x1,
+ //   void maxIntProp(@ForAll @Positive int x1, @ForAll @Positive int x2, @ForAll @Positive int x3, @ForAll @Positive int x4) {
+    void maxIntProp(@ForAll @IntRange(min=1, max=4) int x1,
                      @ForAll @IntRange(min=1, max=4) int x2,
                      @ForAll @IntRange(min=1, max=4) int x3,
                      @ForAll @IntRange(min=1, max=4) int x4) {

@@ -1,7 +1,7 @@
 /* CISC/CMPE 422/835
  * Property-based testing: a first example
- * Finding the maximum among 4 integers (maxInt)
- * Finding the index of the maximum in an int array of length 4
+ * - maxInt: Finding the maximum among 4 integers
+ * - maxPos: Finding the index of the maximum in an int array of length 4
  */
 public class Max {
     public static void main(String[] args) {
@@ -18,12 +18,12 @@ public class Max {
             else if (x3 > x4)
                 return x3;  // correct
 //                return x1;  // bug 1
-//                return x2;  // bug 2
+//               return x2;  // bug 2
 //                return x3;  // bug 3
             else
-                return x4;  // correct
+//                return x4;  // correct
 //                return x1;  // bug 4
-//                return x2;  // bug 5
+                return x2;  // bug 5
 //                return x3;  // bug 6
         else if (x2 > x3)
             if (x2 > x4)
