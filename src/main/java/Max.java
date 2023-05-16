@@ -21,9 +21,9 @@ public class Max {
 //               return x2;  // bug 2
 //                return x3;  // bug 3
             else
-//                return x4;  // correct
+                return x4;  // correct
 //                return x1;  // bug 4
-                return x2;  // bug 5
+//                return x2;  // bug 5
 //                return x3;  // bug 6
         else if (x2 > x3)
             if (x2 > x4)

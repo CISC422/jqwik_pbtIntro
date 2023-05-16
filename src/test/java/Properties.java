@@ -4,6 +4,7 @@
 
 import net.jqwik.api.*;
 import net.jqwik.api.constraints.IntRange;
+import net.jqwik.api.constraints.Positive;
 import net.jqwik.api.constraints.Size;
 import net.jqwik.api.constraints.UniqueElements;
 import org.assertj.core.api.Assertions;
@@ -14,8 +15,9 @@ public class Properties {
 
     @Property
     @Report(Reporting.GENERATED)
- //   void maxIntProp(@ForAll @Positive int x1, @ForAll @Positive int x2, @ForAll @Positive int x3, @ForAll @Positive int x4) {
-    void maxIntProp(@ForAll @IntRange(min=1, max=4) int x1,
+//   void maxIntProp(@ForAll int x1, @ForAll int x2, @ForAll int x3, @ForAll int x4) {
+//   void maxIntProp(@ForAll @Positive int x1, @ForAll @Positive int x2, @ForAll @Positive int x3, @ForAll @Positive int x4) {
+   void maxIntProp(@ForAll @IntRange(min=1, max=4) int x1,
                      @ForAll @IntRange(min=1, max=4) int x2,
                      @ForAll @IntRange(min=1, max=4) int x3,
                      @ForAll @IntRange(min=1, max=4) int x4) {
@@ -29,8 +31,9 @@ public class Properties {
     @Property
     @Report(Reporting.GENERATED)
     void maxPosProp(@ForAll("myIntArrays") @UniqueElements int[] a) {
-//    void maxPosProp(@ForAll("myIntArrays") int[] a) {
+//   void maxPosProp(@ForAll("myIntArrays") int[] a) {
 //    void maxPosProp(@ForAll @Size(4) int[] a) {
+        // Assume.that(a[0]==10 && a[1]==11);
         int res = Max.maxPos(a);
         Assertions.assertThat(a[res]).isGreaterThanOrEqualTo(a[0]);
         Assertions.assertThat(a[res]).isGreaterThanOrEqualTo(a[1]);
