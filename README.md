@@ -5,7 +5,7 @@ Sample code to illustrate Reachability-Infection-Propagation-Reveal (RIPR) model
 structural coverage metrics (line and branch coverage), and property-based testing with Jqwik. 
 See CISC 422/835 course notes for details.
 
-### `FindLast`
+### [`FindLast`](src/main/java/FindLast.java)
 The [`findLast(int[] a, int e)`](src/main/java/FindLast.java#L6-L12) method has a bug, but 4 of the 5 tests in 
 [`FindLastExampleTests.java`](src/test/java/FindLastExampleTests.java) succeed anyway, because they don't satisfy
 the requirements of the RIPR model. Only test [`test5`](src/test/java/FindLastExampleTests.java#L29-L33) 
@@ -14,7 +14,7 @@ Example taken from Oscar Luis Vera-Pérez's [Software Validation & Verification 
 [`FindLastProperties.java`](src/test/java/FindLastProperties.java) shows how property-based testing can be used to 
 automatically find test inputs that lead to a test failure.
 
-### `MaxInt2`, `MaxInt4`, and `MaxPos`
+### [`MaxInt2`](src/main/java/MaxInt2.java), [`MaxInt4`](src/main/java/MaxInt4.java), and [`MaxPos`](src/main/java/MaxPos.java)
 [`maxInt2(int x1, int x2)`](src/main/java/MaxInt2.java#L6-L11) and 
 [`maxInt4(int x1, int x2, int x3, int x4)`](src/main/java/MaxInt4.java#L6-L33) 
 illustrate line and branch coverage. 
