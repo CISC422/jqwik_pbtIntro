@@ -1,5 +1,5 @@
 /* CISC/CMPE 422/835
- * Property-based testing: a first example
+ * RIPR model, coverage and property-based testing: first examples
  */
 
 import net.jqwik.api.*;
@@ -11,6 +11,7 @@ import java.util.Arrays;
 
 public class MaxProperties {
 
+    // fails for all bugs with, e.g., 100 tries (which provide 100% line and branch coverage; 10 tries: 86%, 85%; 20 tries: 80%, 78%; 30 tries: 100%, 100%)
     @Property
     @Report(Reporting.GENERATED)
 //   void maxIntProp(@ForAll int x1, @ForAll int x2, @ForAll int x3, @ForAll int x4) {

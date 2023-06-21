@@ -1,9 +1,14 @@
 /* CISC/CMPE 422/835
- * Property-based testing: a first example
+ * RIPR model, coverage and property-based testing: first examples
  */
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+// Coverage:
+// - Input: each of the four input parameters holds the maximum exactly once
+// - Structural:
+//   . All tests together provide 66% line coverage (10/15) and 64% branch coverage (9/14)
+//   . Alone, each test provides 27% line coverage (4/15) and 21% branch coverage (3/14)
 public class MaxInt4ExampleTests {
 
     @Test

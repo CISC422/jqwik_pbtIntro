@@ -1,5 +1,5 @@
 /* CISC/CMPE 422/835
- * Property-based testing: a first example
+ * RIPR model, coverage and property-based testing: first examples
   * - maxInt4: Finding the maximum among 4 integers
   */
 public class MaxInt4 {
@@ -13,7 +13,7 @@ public class MaxInt4 {
             else if (x3 > x4)
                 return x3;  // correct
 //                return x1;  // bug 1
-//               return x2;  // bug 2
+//                return x2;  // bug 2
 //                return x3;  // bug 3
             else
                 return x4;  // correct
@@ -24,7 +24,8 @@ public class MaxInt4 {
             if (x2 > x4)
                 return x2;
             else
-                return x4;
+                return x4;  // correct
+//              return x1;  // bugs 7, 8, 9
         else if (x3 > x4)
             return x3;
         else

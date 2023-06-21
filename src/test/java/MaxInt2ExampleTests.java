@@ -1,9 +1,11 @@
 /* CISC/CMPE 422/835
- * Property-based testing: a first example
+ * RIPR model, coverage and property-based testing: first examples
  */
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+// Each test on its own provides 100% line (4/4) coverage and 50% (1/2) branch coverage
+// Test1 and (Test2 or Test3) provide 100% branch coverage
 public class MaxInt2ExampleTests {
 
     @Test

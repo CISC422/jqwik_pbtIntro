@@ -1,7 +1,7 @@
 /* CISC/CMPE 422/835
- * Property-based testing: a first example
+ * RIPR model, coverage and property-based testing: first examples
  * - maxInt2: Finding the maximum among 2 integers
-   */
+ */
 public class MaxInt2 {
     public static int maxInt2(int x1, int x2) {
         int res = x1;
