@@ -33,7 +33,7 @@ public class MaxProperties {
 //    void maxPosProp(@ForAll("myIntArrays") @UniqueElements int[] a) {
 //   void maxPosProp(@ForAll("myIntArrays") int[] a) {
    void maxPosProp(@ForAll @Size(4) int[] a) {
-        Assume.that(a[0]==10);  // use 'assume' to capture additional pre-conditions
+//        Assume.that(a[0]==10);  // use 'assume' to capture additional pre-conditions
         int res = MaxPos.maxPos(a);
         Assertions.assertThat(a[res]).isGreaterThanOrEqualTo(a[0]);
         Assertions.assertThat(a[res]).isGreaterThanOrEqualTo(a[1]);

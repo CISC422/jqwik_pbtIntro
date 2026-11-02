@@ -1,4 +1,4 @@
-/* CISC/CMPE 422/835
+/* CISC/CMPE 328, CISC 422
  * RIPR model, coverage and property-based testing: first examples
  * - findLast: return largest index i such that array[i] == element, -1 otherwise
  */
