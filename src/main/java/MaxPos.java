@@ -1,4 +1,4 @@
-/* CISC/CMPE 422/835
+/* CISC/CMPE 328, CISC 422
  * Property-based testing: a first example
   * - maxPos: Finding the index of the maximum in an int array of length 4; more than one result may be correct!
  */

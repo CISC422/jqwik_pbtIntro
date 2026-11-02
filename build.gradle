@@ -32,8 +32,8 @@ test {
         // includeEngines 'junit-vintage'
 
         include '**/*Properties.class'
-        include '**/*Test.class'
-        include '**/*Tests.class'
+        include '**/*Test*.class'
+        include '**/*Tests*.class'
     }
 }
 

@@ -12,7 +12,7 @@ public class MaxInt4 {
                     return x4;
             else if (x3 > x4)
                 return x3;  // correct
-//                return x1;  // bug 1
+//                  return x1;  // bug 1
 //                return x2;  // bug 2
 //                return x3;  // bug 3
             else

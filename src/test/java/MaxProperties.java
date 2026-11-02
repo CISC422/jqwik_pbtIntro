@@ -1,9 +1,10 @@
-/* CISC/CMPE 422/835
+/* CISC/CMPE 328, CISC 422
  * RIPR model, coverage and property-based testing: first examples
  */
 
 import net.jqwik.api.*;
 import net.jqwik.api.constraints.IntRange;
+import net.jqwik.api.constraints.Size;
 import net.jqwik.api.constraints.UniqueElements;
 import org.assertj.core.api.Assertions;
 
@@ -13,7 +14,7 @@ public class MaxProperties {
 
     // fails for all bugs with, e.g., 100 tries (which provide 100% line and branch coverage; 10 tries: 86%, 85%; 20 tries: 80%, 78%; 30 tries: 100%, 100%)
     @Property
-    @Report(Reporting.GENERATED)
+//    @Report(Reporting.GENERATED)
 //   void maxIntProp(@ForAll int x1, @ForAll int x2, @ForAll int x3, @ForAll int x4) {
 //   void maxIntProp(@ForAll @Positive int x1, @ForAll @Positive int x2, @ForAll @Positive int x3, @ForAll @Positive int x4) {
    void maxInt4Prop(@ForAll @IntRange(min=1, max=4) int x1,
@@ -28,11 +29,11 @@ public class MaxProperties {
     }
 
     @Property
-    @Report(Reporting.GENERATED)
-    void maxPosProp(@ForAll("myIntArrays") @UniqueElements int[] a) {
+//    @Report(Reporting.GENERATED)
+//    void maxPosProp(@ForAll("myIntArrays") @UniqueElements int[] a) {
 //   void maxPosProp(@ForAll("myIntArrays") int[] a) {
-//    void maxPosProp(@ForAll @Size(4) int[] a) {
-        // Assume.that(a[0]==10 && a[1]==11);
+   void maxPosProp(@ForAll @Size(4) int[] a) {
+        Assume.that(a[0]==10);  // use 'assume' to capture additional pre-conditions
         int res = MaxPos.maxPos(a);
         Assertions.assertThat(a[res]).isGreaterThanOrEqualTo(a[0]);
         Assertions.assertThat(a[res]).isGreaterThanOrEqualTo(a[1]);

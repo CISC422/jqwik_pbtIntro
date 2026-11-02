@@ -16,7 +16,7 @@ public class FindLastProperties {
 
     // fails with, e.g., 100 tries
     @Property
-    @Report(Reporting.GENERATED)
+ //   @Report(Reporting.GENERATED)
    void findLastProp(@ForAll("myIntArrays") int[] a,
                      @ForAll @IntRange(min=minInt, max=maxInt) int e) {
         int res = FindLast.findLast(a, e);
@@ -37,8 +37,9 @@ public class FindLastProperties {
     }
 
     @Property
-    void checkMyIntArraysProp(@ForAll("myIntArrays") int[] a) {
+    boolean checkMyIntArraysProp(@ForAll("myIntArrays") int[] a) {
         System.out.println(Arrays.toString(a));
+        return false;
     }
 
 }

@@ -11,8 +11,8 @@ public class FindLast {
         return -1;
     }
 /*  reformatting to artificially increase line coverage
-        for (int i = array.length - 1; i > 0 ; i--) {             if(array[i] == element)                 return i;         }         return -1;
- */
+        for (int i = array.length - 1; i > 0 ; i--) {             if(array[i] == element)                 return i;         }         return -1;  }
+*/
 /*  reformatting to make 'line coverage' simulate 'statement coverage'
       for (int i = array.length - 1;
              i > 0 ;
@@ -22,5 +22,5 @@ public class FindLast {
         }
         return -1;
     }
-*/
+ */
 }
