@@ -13,8 +13,8 @@ public class MaxPos {
                 else
                     return 3;
             else if (a[2] > a[3])
-//                return 2;  // correct
-                return 0;  // bug 1
+                return 2;  // correct
+//                return 0;  // bug 1
 //                return 1;  // bug 2
 //                return 2;  // bug 3
             else
